@@ -10,6 +10,10 @@ const {
   errorMiddleware,
 } = require("./middleware");
 
+const {
+  ReferRouter,
+} = require("./routes");
+
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -32,7 +36,7 @@ app.get("/", (req, res) => {
   res.status(StatusCodes.OK)
     .send("Welcome to store nest");
 })
-
+app.use("/api/ref", ReferRouter)
 
 
 app.use("*", (req, res) => {
