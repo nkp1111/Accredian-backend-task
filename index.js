@@ -34,7 +34,7 @@ app.use(cors(
 // routes
 app.get("/", (req, res) => {
   res.status(StatusCodes.OK)
-    .send("Welcome to store nest");
+    .send("Welcome to Accredian landing page backend");
 })
 app.use("/api/ref", ReferRouter)
 
